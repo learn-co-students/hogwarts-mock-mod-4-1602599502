@@ -8,7 +8,8 @@ class App extends Component {
 
   state ={
     wizards: [],
-    selectedCategory: "Gryffindor"
+    selectedCategory: "Gryffindor",
+    selectedmap: "All"
   }
   componentDidMount(){
     fetch("http://localhost:4000/wizards")
@@ -42,17 +43,35 @@ class App extends Component {
       })
   }
 
+  changeSelectedMap =(chosenmap) =>{
+    this.setState({
+      selectedmap: chosenmap
+    })
+  }
+
+  HelpfilterHouse =() =>{
+    const {wizards, selectedmap} = this.state
+    const filterHouse = wizards.filter((wizard) =>
+    selectedmap === "All" ? 
+    wizard
+    :
+    wizard.house === selectedmap
+  );
+  return filterHouse
+  }
+
   render() {
 
     return (
       <div className="App">
         <Header />
         <Hogwarts 
-        wizards={this.state.wizards}
+        wizards={this.HelpfilterHouse()}
         selectedCategory={this.state.selectedCategory}
         changeCategory={this.changeCategory}
         createNewWizard={this.createNewWizard}
         graduateWizard={this.graduateWizard}
+        changeSelectedMap={this.changeSelectedMap}
         />
       </div>
     );

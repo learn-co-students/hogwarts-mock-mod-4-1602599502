@@ -8,7 +8,9 @@ class Hogwarts extends Component {
   render() {
     return (
       <main>
-        <MaraudersMap/>
+        <MaraudersMap
+        changeSelectedMap={this.props.changeSelectedMap}
+        />
         <GreatHall 
         wizards={this.props.wizards} 
         graduateWizard={this.props.graduateWizard}
