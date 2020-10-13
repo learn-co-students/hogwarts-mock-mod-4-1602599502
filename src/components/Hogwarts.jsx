@@ -6,29 +6,45 @@ import MaraudersMap from './MaraudersMap'
 class Hogwarts extends Component {
 
   state = {
-    wizards: []
+    wizards: [],
+    allWizards: []
   }
 
   componentDidMount() {
     fetch('http://localhost:4000/wizards')
       .then(response => response.json())
       .then((arrayOfWizards) => {
-        this.setState({ wizards: arrayOfWizards })
+        this.setState({ 
+          wizards: arrayOfWizards,
+          allWizards: arrayOfWizards
+        })
       })
   }
 
   addWizardToState = (newWizardObj) => {
     this.setState((prevState) => {
       let copyOfWizards = [...prevState.wizards, newWizardObj]
-      return { wizards: copyOfWizards }
+      return {  
+        wizards: copyOfWizards,
+        allWizards: copyOfWizards
+      }
     })
+  }
+
+  filterWizards = (houseSelection) => {
+    if(houseSelection !== "All" ){
+      let filteredWizards = this.state.wizards.filter((wizard) => wizard.house === houseSelection)
+      this.setState({ wizards: filteredWizards})
+    } else {
+      this.setState({ wizards: this.state.allWizards })
+    }
   }
 
   render() {
 
     return (
       <main>
-        <MaraudersMap/>
+        <MaraudersMap filterWizards={this.filterWizards} />
         <GreatHall wizards={this.state.wizards} />
         <SortingHat addWizard={this.addWizardToState} />
       </main>
