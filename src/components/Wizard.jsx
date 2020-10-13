@@ -9,6 +9,22 @@ class Wizard extends Component {
   toggleImageState = () => {
     this.setState({ image1: !this.state.image1 })
   }
+
+  handleDelete = (event) => {
+    console.log(event.target.value)
+    // fetch(`http://localhost:4000/wizards/${wizardId}`, {
+    //   method: 'DELETE'
+    // })
+    //   .then(response => response.json())
+    //   .then((emptyObj) => {
+    //     this.props.deleteWizard(wizardId)
+    //   })
+  }
+  // wizardId isn't the wizard.id in this case. trying to figure out how to 
+
+  grabId = (id) => {
+    console.log(id)
+  }
   
   render() {
 
@@ -28,7 +44,8 @@ class Wizard extends Component {
             <div className="card_bottom">
               <p className="house_name">{house}</p>
               <p className="description">Wand: {wand}</p>
-              <button>
+              <button onClick={this.grabId(id)} >
+              {/* out of time, will just wait for review. */}
                 Graduate
               </button>
             </div>

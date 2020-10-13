@@ -4,7 +4,7 @@ import Wizard from './Wizard'
 const GreatHall = (props) => {
 
   let arrayOfWizardComponents = props.wizards.map((wizard) => {
-    return <Wizard key={wizard.id} wizard={wizard} />
+    return <Wizard key={wizard.id} wizard={wizard} deleteWizard={props.deleteWizard} />
   })
 
   return (

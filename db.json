@@ -49,28 +49,12 @@
       "image2": "https://img1.looper.com/img/gallery/professor-mcgonagalls-entire-backstory-explained/intro-1582830670.jpg"
     },
     {
-      "name": "Chris",
+      "name": "john",
       "wand": "Bacon",
-      "house": "Gryffindor",
-      "image1": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Qq1irwjL1Bir3JuIw9iCnAHaFj%26pid%3DApi&f=1",
-      "image2": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.d2uxpiW99_Jn5U-fz1kKAwHaKD%26pid%3DApi&f=1",
-      "id": 7
-    },
-    {
-      "name": "Jessie",
-      "wand": "Sour Apple",
-      "house": "Ravenclaw",
-      "image1": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Forig00.deviantart.net%2F587c%2Ff%2F2010%2F169%2F3%2Fd%2Fwizard_girl_by_paramore345.jpg&f=1&nofb=1",
-      "image2": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fih1.redbubble.net%2Fimage.308760094.3725%2Fflat%2C1000x1000%2C075%2Cf.jpg&f=1&nofb=1",
-      "id": 8
-    },
-    {
-      "name": "Jenny",
-      "wand": "Sweet Peaches",
       "house": "Hufflepuff",
-      "image1": "http://i.neoseeker.com/mgv/415696-horselvr565/696/60/girl_anime_wizard_display.jpg",
-      "image2": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.zerochan.net%2FWicked.Witch.full.473831.jpg&f=1&nofb=1",
-      "id": 9
+      "image1": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Qq1irwjL1Bir3JuIw9iCnAHaFj%26pid%3DApi&f=1",
+      "image2": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fih1.redbubble.net%2Fimage.308760094.3725%2Fflat%2C1000x1000%2C075%2Cf.jpg&f=1&nofb=1",
+      "id": 7
     }
   ]
 }

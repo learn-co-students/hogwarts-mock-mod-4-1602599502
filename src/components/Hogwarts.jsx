@@ -31,6 +31,14 @@ class Hogwarts extends Component {
     })
   }
 
+  deleteWizardFromState = (wizardId) => {
+    let filteredWizards = this.state.wizards.filter((wizard) => wizard.id !== wizardId)
+    this.setState({
+      wizards: filteredWizards,
+      allWizards: filteredWizards
+    })
+  }
+
   filterWizards = (houseSelection) => {
     if(houseSelection !== "All" ){
       let filteredWizards = this.state.wizards.filter((wizard) => wizard.house === houseSelection)
@@ -45,7 +53,7 @@ class Hogwarts extends Component {
     return (
       <main>
         <MaraudersMap filterWizards={this.filterWizards} />
-        <GreatHall wizards={this.state.wizards} />
+        <GreatHall wizards={this.state.wizards} deleteWizard={this.deleteWizardFromState}/>
         <SortingHat addWizard={this.addWizardToState} />
       </main>
     )
