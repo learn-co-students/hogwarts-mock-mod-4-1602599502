@@ -1,12 +1,17 @@
 import React from 'react';
 import Wizard from './Wizard'
 
-const GreatHall = () => {
+const GreatHall = (props) => {
+
+  let arrayOfWizardComponents = props.wizards.map((wizard) => {
+    return <Wizard key={wizard.id} wizard={wizard} />
+  })
+
   return (
     <section>
       <h2>Students of Hogwarts</h2>
       <ul className="cards">
-        {/* Render Wizards Here*/}
+        { arrayOfWizardComponents }
       </ul>
     </section>
   )

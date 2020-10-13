@@ -5,11 +5,24 @@ import MaraudersMap from './MaraudersMap'
 
 class Hogwarts extends Component {
 
+  state = {
+    wizards: []
+  }
+
+  componentDidMount() {
+    fetch('http://localhost:4000/wizards')
+      .then(response => response.json())
+      .then((arrayOfWizards) => {
+        this.setState({ wizards: arrayOfWizards })
+      })
+  }
+
   render() {
+
     return (
       <main>
         <MaraudersMap/>
-        <GreatHall/>
+        <GreatHall wizards={this.state.wizards} />
         <SortingHat/>
       </main>
     )
