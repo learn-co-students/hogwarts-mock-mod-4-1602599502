@@ -9,8 +9,15 @@ class Hogwarts extends Component {
     return (
       <main>
         <MaraudersMap/>
-        <GreatHall/>
-        <SortingHat/>
+        <GreatHall 
+        wizards={this.props.wizards} 
+        graduateWizard={this.props.graduateWizard}
+        />
+        <SortingHat 
+        selectedCategory={this.props.selectedCategory}
+        changeCategory={this.props.changeCategory}
+        createNewWizard={this.props.createNewWizard}
+        />
       </main>
     )
   }
