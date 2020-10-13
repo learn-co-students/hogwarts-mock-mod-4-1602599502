@@ -47,6 +47,14 @@
       "house": "Gryffindor",
       "image1": "https://fsmedia.imgix.net/21/fd/33/16/2844/4ec3/bae9/57d38001e216/sonserina.jpeg?rect=0%2C0%2C1920%2C959&dpr=2&auto=format%2Ccompress&w=650",
       "image2": "https://img1.looper.com/img/gallery/professor-mcgonagalls-entire-backstory-explained/intro-1582830670.jpg"
+    },
+    {
+      "name": "Luna Lovegood",
+      "wand": "Unknown Material",
+      "house": "Ravenclaw",
+      "image1": "https://images.ctfassets.net/usf1vwtuqyxm/6JMNdu0W28V8KAJwsbtgVI/651cfc0b0f2588e0b1bfadef65232a55/HP5D-14916.jpg?fm=jpg",
+      "image2": "https://images.ctfassets.net/usf1vwtuqyxm/5BybRlpYmAwUGaW8aS48I6/d5aa1cd1ba2e6c4512109ab0b5035fde/LunaLovegood_WB_F5_LunaLovegoodConjuringPatronus_Still_080615_Land.jpg",
+      "id": 7
     }
   ]
 }
