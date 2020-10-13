@@ -7,10 +7,11 @@ import Hogwarts from './components/Hogwarts'
 class App extends Component {
 
   render() {
+
     return (
       <div className="App">
         <Header />
-        <Hogwarts />
+        <Hogwarts/>
       </div>
     );
   }
