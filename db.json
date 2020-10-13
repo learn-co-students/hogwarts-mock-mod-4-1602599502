@@ -14,7 +14,7 @@
       "wand": "Dragon Heartstring",
       "house": "Gryffindor",
       "image1": "https://wallpapersite.com/images/pages/pic_w/8936.jpg",
-      "image2": "https://vignette.wikia.nocookie.net/harrypotter/images/7/7e/Hermione-HBP-hermione-granger-16048675-1919-2560.jpg/revision/latest?cb=20140628051753"
+      "image2": "https://pm1.narvii.com/6861/0db63d4c912b78c1b23139b4b5da902331ffbb5er1-800-600v2_uhq.jpg"
     },
     {
       "id": 3,
@@ -47,6 +47,22 @@
       "house": "Gryffindor",
       "image1": "https://fsmedia.imgix.net/21/fd/33/16/2844/4ec3/bae9/57d38001e216/sonserina.jpeg?rect=0%2C0%2C1920%2C959&dpr=2&auto=format%2Ccompress&w=650",
       "image2": "https://img1.looper.com/img/gallery/professor-mcgonagalls-entire-backstory-explained/intro-1582830670.jpg"
+    },
+    {
+      "name": "Cedric Diggory",
+      "wand": "Unicorn Hair",
+      "house": "Hufflepuff",
+      "image1": "https://media1.popsugar-assets.com/files/thumbor/vSDED3reG6GqABrzP32TecdfCjY/0x34:2098x1135/fit-in/1200x630/filters:format_auto-!!-:strip_icc-!!-/2020/10/01/766/n/1922283/008fc5305f7610b4dd84c7.36034607_.jpg",
+      "image2": "https://vignette.wikia.nocookie.net/harrypotter/images/9/90/Cedric_Diggory_Profile.png/revision/latest?cb=20161123045136",
+      "id": 7
+    },
+    {
+      "name": "Gilderoy Lockhart",
+      "wand": "Dragon Heartstring",
+      "house": "Ravenclaw",
+      "image1": "https://static2.comicvine.com/uploads/original/11114/111142976/5513844-3011749501-Kenne.jpg",
+      "image2": "https://images.ctfassets.net/usf1vwtuqyxm/UwHV3x6bGCSSi0c2WY0Ui/38a0f58df4d7946e14124a1be7e74e99/GilderoyLockhart_WB_F2_GilderoyLockhartWithHandOnWaist_Still_080615_Land.jpg",
+      "id": 8
     }
   ]
 }
