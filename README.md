@@ -32,6 +32,6 @@ As a user, I should be able to:
 
 [x]* Log a new `Wizard` through the use of the `SortingHat`. When the form within the `SortingHat` is submitted, a new wizard should be persisted to the backend with the information that was filled out in the form. The new `Wizard` should also be rendered out on the frontend when the form submits, without the page needing to refresh.
 
-* Filter out the wizards by their houses. `MaraudersMap` is the component that will decide whether all the wizards in the database is rendered or only wizards from a specific house is rendered. As an option is selected, the wizards being shown on the React frontend should change without the page needing to refresh.
+[c]Filter out the wizards by their houses. `MaraudersMap` is the component that will decide whether all the wizards in the database is rendered or only wizards from a specific house is rendered. As an option is selected, the wizards being shown on the React frontend should change without the page needing to refresh.
 
 []* Graduate a `Wizard` from Hogwarts. When the Graduate button is clicked, the `Wizard` should be deleted from the backend and the corresponding component should be removed from the page without the page refreshing. 
