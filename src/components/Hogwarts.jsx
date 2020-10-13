@@ -17,13 +17,20 @@ class Hogwarts extends Component {
       })
   }
 
+  addWizardToState = (newWizardObj) => {
+    this.setState((prevState) => {
+      let copyOfWizards = [...prevState.wizards, newWizardObj]
+      return { wizards: copyOfWizards }
+    })
+  }
+
   render() {
 
     return (
       <main>
         <MaraudersMap/>
         <GreatHall wizards={this.state.wizards} />
-        <SortingHat/>
+        <SortingHat addWizard={this.addWizardToState} />
       </main>
     )
   }

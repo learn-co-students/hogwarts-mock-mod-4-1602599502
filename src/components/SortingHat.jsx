@@ -2,12 +2,38 @@ import React, { Component } from 'react';
 
 class SortingHat extends Component {
 
+  registerNewWizard = (event) => {
+    event.preventDefault()
+    let newWizardName = event.target.name.value
+    let newWizardWand = event.target.wand.value 
+    let newWizardHouse = event.target.house.value 
+    let newWizardImg1 = event.target.image1.value 
+    let newWizardImg2 = event.target.image2.value 
+
+    fetch('http://localhost:4000/wizards', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        name: newWizardName,
+        wand: newWizardWand,
+        house: newWizardHouse,
+        image1: newWizardImg1,
+        image2: newWizardImg2
+      })
+    })
+      .then(response => response.json())
+      .then(this.props.addWizard)
+      event.target.reset()
+  }
+
   render() {
 
     return (
       <section>
         <h2>You Could Be Great, You Know...</h2>
-        <form className="new_container">
+        <form className="new_container" onSubmit={this.registerNewWizard}>
 
           <label htmlFor="name">Name:</label>
           <input type="text" name="name" id="name"/>
