@@ -2,7 +2,15 @@ import React, { Component } from 'react';
 
 class Wizard extends Component {
 
- 
+  state = {
+    toggleImage: false
+  }
+
+ handleClick = (evt) => {
+   this.setState({
+    toggleImage: !this.state.toggleImage
+   })
+ }
 
   render() {
     let {name, wand, house, image1, image2} = this.props.wizard
@@ -14,7 +22,7 @@ class Wizard extends Component {
                 <h3>{name}</h3>
               </div>
               <div className="border">
-                <img src={image1} alt={name}/>
+                <img onClick={this.handleClick} src={this.state.toggleImage? image2: image1} alt={name}  />
               </div>
             </div>
             <div className="card_bottom">
@@ -25,6 +33,8 @@ class Wizard extends Component {
               </button>
             </div>
           </div>
+           
+
         </li>
 
     );
