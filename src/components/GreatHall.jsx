@@ -11,7 +11,7 @@ console.log("These are the props:", props)
 let wizards = props.wizards.map((wizard) => {
   //you can also deconstruct and do 
   //return <Wizard key={wizard.id} {...wizard}
-  return <Wizard key={wizard.id} wizard={wizard} />
+  return <Wizard key={wizard.id} wizard={wizard} getDeletedWizard={props.getDeletedWizard}/>
 })
 
   return (

@@ -10,7 +10,24 @@ class Wizard extends Component {
     this.setState({
       imageToggle: !this.state.imageToggle
     })
+    // this.state((prevState) => {
+    //   return {imageToggle: !prevState.imageToggle}
+    // })
   }
+
+  handleDelete = () => {
+    fetch(`http://localhost:4000/wizards/${this.props.wizard.id}`, {
+      method: "DELETE"
+    })
+    .then(res => res.json())
+    .then(arrayOfWizards => {
+      this.props.getDeletedWizard(this.props.wizard.id)
+    })
+  }
+
+
+
+
 
   render() {
     console.log("is the props here", this.props)
@@ -33,7 +50,7 @@ class Wizard extends Component {
             <div className="card_bottom">
               <p className="house_name">{house}</p>
               <p className="description">Wand: {wand}</p>
-              <button>
+              <button onClick={this.handleDelete}>
                 Graduate
               </button>
             </div>

@@ -7,7 +7,8 @@ class Hogwarts extends Component {
 
 //cannot mutate state
   state = {
-    wizards: []
+    wizards: [],
+    selectedHouse: "All"
   }
 
   //do a componentDidMount
@@ -22,6 +23,53 @@ class Hogwarts extends Component {
       })
   }
 
+
+  addWizardToState = (newWizard) => {
+    //we create the below line because we do not want to mutate the original the original state
+
+    let copyOfWizards = [...this.state.wizards, newWizard]
+    this.setState({
+      wizards: copyOfWizards
+    })
+    console.log("this is the new wizard:", newWizard)
+  }
+
+
+//grabs info from child and saves to state
+  filterWizards = (optionWeGetBack) => {
+    //we want to pass down the prop to Marauders
+    console.log(optionWeGetBack)
+  
+    this.setState({
+      selectedHouse: optionWeGetBack
+    })
+
+  }
+
+
+  //take state and filters based on it
+
+  helpFilterWizards = () => {
+    if (this.state.selectedHouse === "All") {
+      return this.state.wizards
+    } else {
+      return this.state.wizards.filter((wizard) => {
+            return wizard.house.includes(this.state.selectedHouse)
+      })
+    }
+  }
+ 
+
+  getDeletedWizard = (id) => {
+    let copyOfWizard = [...this.state.wizards]
+    const filteredWizard = copyOfWizard.filter((wizard) => {
+      return wizard.id !== id 
+    })
+    this.setState({
+      wizards: filteredWizard
+    })
+  }
+
   render() {
 
 
@@ -29,10 +77,13 @@ class Hogwarts extends Component {
 
 
     return (
+      //for the sortingHat we are adding the wizard prop to sorting hat.
+
       <main>
-        <MaraudersMap/>
-        <GreatHall wizards={this.state.wizards}/>
-        <SortingHat/>
+        <MaraudersMap filterWizards={this.filterWizards} selectedHouse={this.state.selectedHouse}/>
+        <GreatHall wizards={this.helpFilterWizards()} getDeletedWizard={this.getDeletedWizard}/>
+        
+        <SortingHat addWizard={this.addWizardToState}/>
       </main>
     )
   }
