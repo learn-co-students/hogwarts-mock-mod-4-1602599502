@@ -12,6 +12,17 @@ class Wizard extends Component {
    })
  }
 
+ handleDelete = () => {
+  fetch(`http://localhost:4000/wizards/${this.props.wizard.id}`, {
+    method: "DELETE"
+  })
+    .then(res => res.json())
+    .then(() => {
+      this.props.getDeletedWizard(this.props.wizard.id)
+    })
+  }
+
+
   render() {
     let {name, wand, house, image1, image2} = this.props.wizard
     return (
@@ -28,7 +39,7 @@ class Wizard extends Component {
             <div className="card_bottom">
               <p className="house_name">{house}</p>
               <p className="description">Wand: {wand}</p>
-              <button>
+              <button onClick={this.handleDelete}>
                 Graduate
               </button>
             </div>

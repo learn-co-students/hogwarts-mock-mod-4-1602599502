@@ -7,8 +7,11 @@ function GreatHall(props){
     return <Wizard
       key={wizardObj.id}
       wizard={wizardObj}
+      getDeletedWizard={props.getDeletedWizard}
       />
   })
+
+  
 
   
       

@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
 
 class MaraudersMap extends Component {
+ 
+handleSelect = (evt) => {
+  // console.log(evt.target.value)
+  this.props.filterWizards(evt.target.value)
+}
+
 
   render() {
     return (
       <nav>
         <h2>Houses of Hogwarts</h2>
-        <select id="map">
+        <select id="map" value={this.props.selectedHouse} onChange={this.handleSelect}>
           <option value="All">All</option>
           <option value="Gryffindor">Gryffindor</option>
           <option value="Hufflepuff">Hufflepuff</option>

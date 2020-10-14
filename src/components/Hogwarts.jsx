@@ -6,7 +6,8 @@ import MaraudersMap from './MaraudersMap'
 class Hogwarts extends Component {
 
   state = {
-    wizards: []
+    wizards: [],
+    selectedHouse: "All"
   }
 
   componentDidMount(){
@@ -27,12 +28,38 @@ class Hogwarts extends Component {
     })
   }
 
+  filterWizards = (slectedOptionRetuned) => {
+    // console.log(slectedOptionRetuned)
+    this.setState({
+      selectedHouse: slectedOptionRetuned
+    })
+  }
+
+  helperFilterWizards = () => {
+    if (this.state.selectedHouse === "All") {
+      return this.state.wizards
+    } else {
+      return this.state.wizards.filter((wizard) => {
+        return wizard.house.includes(this.state.selectedHouse)
+      })
+    }
+  }
+
+  getDeletedWizard = (id) =>{
+    const filteredWizard = this.state.wizards.filter((wizard) => {
+      return wizard.id !== id
+    })
+    this.setState({
+      wizards: filteredWizard
+    })
+  }
+
 
   render() {
     return (
       <main>
-        <MaraudersMap/>
-        <GreatHall wizards={this.state.wizards}/>
+        <MaraudersMap filterWizards={this.filterWizards} selectedHouse={this.state.selectedHouse}/>
+        <GreatHall wizards={this.helperFilterWizards()} getDeletedWizard={this.getDeletedWizard}/>
         <SortingHat addNewWizard={this.addNewWizard}/>
       </main>
     )
